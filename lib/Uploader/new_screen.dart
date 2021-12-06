@@ -1,3 +1,4 @@
+import 'package:ffile_uploader/Uploader/web_wiev.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:open_file/open_file.dart';
@@ -55,7 +56,14 @@ class _NewScreenState extends State<NewScreen> {
                             Text("Upload"),
                             Icon(Icons.upload_file),
                           ]))),
-              ElevatedButton(onPressed: () {}, child: Text("Check")),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => WebViewComponent()));
+                  },
+                  child: const Text("Go TO Social Media")),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const <Widget>[
